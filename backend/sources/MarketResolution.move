@@ -5,7 +5,7 @@ module MarketResolution {
     use 0x1::Address;
 
     public fun assert_market(signer: &signer, market_id: u64, asserted_outcome: vector<u8>) {
-        let market = &mut borrow_global_mut<MarketCreation::MarketManager>(Signer::address_of(signer)).markets[(usize)market_id];
+        let market = &mut borrow_global_mut<MarketCreation::MarketManager>(Signer::address_of(signer)).markets[market_id];
         assert(!market.resolved, 1); // Market already resolved
 
         // Assert market outcome using UMA Oracle
@@ -14,7 +14,7 @@ module MarketResolution {
     }
 
     public fun resolve_market(signer: &signer, market_id: u64) {
-        let market = &mut borrow_global_mut<MarketCreation::MarketManager>(Signer::address_of(signer)).markets[(usize) market_id];
+        let market = &mut borrow_global_mut<MarketCreation::MarketManager>(Signer::address_of(signer)).markets[market_id];
         assert(!market.resolved, 1); // Market already resolved
         assert(Option::is_some(&market.assertion_id), 2); // Market not asserted
 

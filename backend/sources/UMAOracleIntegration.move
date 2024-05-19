@@ -1,7 +1,7 @@
 module UMAOracleIntegration {
     use 0x2::address;
 
-    struct OutcomeOracle has store, key{
+    public struct OutcomeOracle has store, key{
         marketManager: MarketCreation::MarketManager,
         Coin: address,
         address : optimisticOracleV3,
