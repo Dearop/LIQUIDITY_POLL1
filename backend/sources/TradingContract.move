@@ -1,7 +1,7 @@
 module TradingContract {
     use sui::address;
-    use std ::vector;
-
+    use std::vector;
+    use std::signer;
 
     public fun buy_shares(address: &signer, market_id: u64, outcome: bool, amount: u64) {
         let market = &mut borrow_global_mut<MarketCreation::MarketManager>(Signer::address_of(signer)).markets[market_id];
