@@ -19,12 +19,6 @@ module MarketCreation {
         stake: u64
     }
 
-    struct Share has drop {
-        id: u64,
-        market_id: u64,
-        representation: bool
-    }
-
     // Coin for yes shares
     struct Share has drop {
         associated_market_id: u64,
