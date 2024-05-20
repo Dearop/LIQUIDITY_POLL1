@@ -2,12 +2,6 @@ module TradingContract {
     use sui::address;
     use std ::vector;
 
-    //On peut utiliser les coins de Sui
-    struct MarketShare has key {
-        market_id: u64,
-        outcome: bool,
-        amount: u64
-    }
 
     public fun buy_shares(address: &signer, market_id: u64, outcome: bool, amount: u64) {
         let market = &mut borrow_global_mut<MarketCreation::MarketManager>(Signer::address_of(signer)).markets[market_id];

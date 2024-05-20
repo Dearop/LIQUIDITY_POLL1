@@ -19,11 +19,13 @@ module MarketCreation {
         assertion_id: Option<u64>
     }
 
+    // Coin for yes shares
     struct YesShare has drop {
         id: u64,
         associated_market_id: u64
     }
 
+    // Coin for no share
     struct NoShare has drop {
         id: u64,
         associated_market_id: u64
