@@ -13,21 +13,17 @@ module MarketCreation {
         outcome_no: vector<u8>,           // No Proposition
         // the user that runs that creates the assertion in the OOV3, necessary to settle the market once it's ready.z
         // Weights for or against
-        required_bond: u64,        // Money to transact to create Market
         resolved: bool,            // Market is finished
         resolution_outcome: Option<bool>,   // Option because can be None, True or False
-        assertion_id: Option<u64>
+        stake: u64
     }
 
-    struct YesShare has drop {
+    struct Share has drop {
         id: u64,
-        associated_market_id: u64
+        market_id: u64,
+        representation: bool
     }
 
-    struct NoShare has drop {
-        id: u64,
-        associated_market_id: u64
-    }
 
     struct MarketManager has key, store {
         markets: vector<Market> // Bunch of Prediction Markets
@@ -54,19 +50,23 @@ module MarketCreation {
         initialStake: u64,
         required_bond: u64
     ): u64 {
+        assert!(description.length > 0, "empty description");
+        assert!(outcome_yes.length > 0, "empty outcome yes");
+        assert!(outcome_no.length > 0, "empty outcome no");
+        assert!(outcome_no != outcome_yes, "same outcome")
         let market_id = Vector::length((u64)&borrow_global_mut<MarketManager>(Signer::address_of(signer)).markets);
         let new_market = Market {
             id: market_id,
             description,
             outcome_yes,
             outcome_no,
-            reward,
-            required_bond,
             resolved: false,
             resolution_outcome: Option::none(),
             assertion_id: Option::none()
         };
         Vector::push_back(&mut borrow_global_mut<MarketManager>(Signer::address_of(signer)).markets, new_market);
+        
+        
         market_id
     }
 }
