@@ -1,6 +1,6 @@
 module TradingContract {
-    use 0x2::address;
-    use 0x1::vector;
+    use sui::address;
+    use std ::vector;
 
     struct MarketShare has key {
         market_id: u64,

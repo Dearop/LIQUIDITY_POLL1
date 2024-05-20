@@ -1,6 +1,7 @@
 module MarketCreation {
-    use 0x1::vector;
-    use 0x2::address;
+    use std::vector;
+    use sui::address;
+    use std::signer;
 
     struct Market has key, store {
         id: u64,
@@ -27,7 +28,7 @@ module MarketCreation {
     */
     public fun initialize_market_manager(account: &signer) {
         let market_manager = MarketManager {
-            markets: Vector::empty<Market>()
+            markets: vector::empty<Market>()
         };
         move_to(account, market_manager);
     }
@@ -41,7 +42,7 @@ module MarketCreation {
         reward: u64,
         required_bond: u64
     ): u64 {
-        let market_id = Vector::length((u64)&borrow_global_mut<MarketManager>(Signer::address_of(signer)).markets);
+        let market_id = vector::length((u64)&borrow_global_mut<MarketManager>(Signer::address_of(signer)).markets);
         let new_market = Market {
             id: market_id,
             description,

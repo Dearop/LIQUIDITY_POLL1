@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a9dd5583-1355-4490-a6b4-501202660808" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sources/MarketCreation.move" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sources/MarketCreation.move" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sources/MarketResolution.move" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sources/MarketResolution.move" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sources/TradingContract.move" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sources/TradingContract.move" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sources/UMAOracleIntegration.move" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sources/UMAOracleIntegration.move" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sui-web3-template" beforeDir="false" afterPath="$PROJECT_DIR$/sui-web3-template" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +28,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -96,6 +102,9 @@
       <workItem from="1715943563200" duration="4000" />
       <workItem from="1715943597689" duration="1000" />
       <workItem from="1716138408919" duration="2725000" />
+      <workItem from="1716141150812" duration="3057000" />
+      <workItem from="1716198143420" duration="6861000" />
+      <workItem from="1716223713444" duration="1470000" />
     </task>
     <servers />
   </component>

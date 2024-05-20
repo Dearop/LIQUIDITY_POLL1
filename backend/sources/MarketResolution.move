@@ -1,8 +1,8 @@
 module MarketResolution {
 
-    use 0x1::Signer;
-    use 0x1::Vector;
-    use 0x1::Address;
+    use sui::signer;
+    use std::vector;
+    use sui::address;
 
     public fun assert_market(signer: &signer, market_id: u64, asserted_outcome: vector<u8>) {
         let market = &mut borrow_global_mut<MarketCreation::MarketManager>(Signer::address_of(signer)).markets[market_id];

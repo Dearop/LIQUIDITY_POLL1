@@ -1,5 +1,5 @@
 module UMAOracleIntegration {
-    use 0x2::address;
+    use sui::address;
 
     public struct OutcomeOracle has store, key{
         marketManager: MarketCreation::MarketManager,
