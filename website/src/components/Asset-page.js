@@ -7,26 +7,49 @@ export default function AssetPage() {
                 <h2 className="text-4xl font-bold">The name of your predicition</h2>    //call api                          
             </div>
             <section className="max-w-6xl mx-auto h-max">
-            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-4">
-            <div className="bg-white p-4 rounded-lg">
-            <h3>Buy</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="bg-white p-4 rounded-lg">Option1</div> //call api
-                <div className="bg-white p-4 rounded-lg">Option2</div> // call api  
-                <div className="bg-transparent p-4 rounded-lg">Price</div> //check how to opacity + call api
-                <div className="bg-transparent p-4 rounded-lg">Amount</div> //call api (availability + send api)
-            </div>
-          </div>
-          <div className="bg-white p-4 rounded-lg">
-          <h3>Sell</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="bg-white p-4 rounded-lg">Option1</div> //call api
-                <div className="bg-white p-4 rounded-lg">Option2</div> // call api  
-                <div className="bg-transparent p-4 rounded-lg">Price</div> //check how to opacity + call api
-                <div className="bg-transparent p-4 rounded-lg">Amount</div> //call api (availability + send api)
-            </div>
-          </div>
-        </div>
+                <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-4">
+                    //start buy
+                    <div className="bg-white p-4 rounded-lg">
+                        <h3>Buy</h3>
+                        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div className="bg-white p-4 rounded-lg">
+                                Option1
+                            </div> //call api
+
+                            <div className="bg-white p-4 rounded-lg">
+                                Option2
+                            </div> // call api  
+                            <div className="bg-transparent p-4 rounded-lg">
+                                Price
+                            </div> //check how to opacity + call api
+                            <div className="bg-transparent p-4 rounded-lg">
+                                Amount
+                            </div> //call api (availability + send api)
+                        </div>
+                    </div>
+                    //end buy 
+                    
+                    //start sell
+                    <div className="bg-white p-4 rounded-lg">
+                        <h3>Sell</h3>
+                        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div className="bg-white p-4 rounded-lg">
+                                Option1
+                            </div> //call api
+
+                            <div className="bg-white p-4 rounded-lg">
+                                Option2
+                            </div> // call api  
+                            <div className="bg-transparent p-4 rounded-lg">
+                                Price
+                            </div> //check how to opacity + call api
+                            <div className="bg-transparent p-4 rounded-lg">
+                                Amount
+                            </div> //call api (availability + send api)
+                        </div>
+                    </div>
+                    //end sell 
+                </div>
             </section>
 
         <section className="max-w-6xl mx-auto h-max"> 
