@@ -1,4 +1,4 @@
-module MarketCreation {
+module predictionMarket::MarketCreation {
     use std::vector;
     use sui::address;
     use sui::coin;
@@ -6,7 +6,7 @@ module MarketCreation {
     use sui::transfer;
     use sui::tx_context::{Self, TxContext};
 
-    struct Market has key, store {
+    public struct Market has key, store {
         id: u64,
         description: vector<u8>,   // String Description of market
         // the user that runs that creates the assertion in the OOV3, necessary to settle the market once it's ready.z
@@ -20,23 +20,10 @@ module MarketCreation {
     }
 
     // Coin for yes shares
-    struct Share has drop {
-        associated_market_id: u64,
-        representation : bool
-    }
 
-    struct MarketManager has key, store {
+
+    public struct MarketManager has key, store {
         markets: vector<Market> // Bunch of Prediction Markets
-    }
-
-    public fun mint(
-        treasury_cap: &mut TreasuryCap<Share>,
-        amount: u64,
-        recipient: address,
-        ctx: &mut TxContext,
-    ) {
-        let coin = coin::mint(treasury_cap, amount, ctx);
-        transfer::public_transfer(coin, recipient)
     }
 
     /**
@@ -49,14 +36,7 @@ module MarketCreation {
         move_to(account, market_manager);
     }
 
-    // TODO Mint Coin @ higher level
-    public fun ShareInit(witness: Share, ctx: &mut TxContex){
-        let (treasury, metadata) = coin::create_currency(witness, 0, b"PollShare", b"PS", b"", option::none(), ctx);
-        transfer::public_freeze_object(metadata);
-        trasury
-        //coin::mint_and_transfer(&mut treasury, qty, tx_context::sender(ctx), ctx);
-        //transfer::public_transfer(treasury, tx_context::sender(ctx))
-    }
+
     /**
     * @brief Create a market
     */

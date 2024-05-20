@@ -1,4 +1,4 @@
-module TradingContract {
+module predictionMarket::TradingContract {
     use sui::address;
     use std::vector;
     use std::signer;

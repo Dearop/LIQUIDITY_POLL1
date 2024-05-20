@@ -1,4 +1,4 @@
-module MarketResolution {
+module predictionMarket::MarketResolution {
 
     use sui::signer;
     use std::vector;
