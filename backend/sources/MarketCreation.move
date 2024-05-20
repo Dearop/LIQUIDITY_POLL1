@@ -9,12 +9,13 @@ module MarketCreation {
     struct Market has key, store {
         id: u64,
         description: vector<u8>,   // String Description of market
-        outcome_yes: vector<u8>,          // Yes Proposition
-        outcome_no: vector<u8>,           // No Proposition
         // the user that runs that creates the assertion in the OOV3, necessary to settle the market once it's ready.z
         // Weights for or against
         resolved: bool,            // Market is finished
         resolution_outcome: Option<bool>,   // Option because can be None, True or False
+        assertion_id: Option<u64>,
+        marketShares : Share,
+        transaction : TransactionCap
         stake: u64
     }
 
@@ -24,6 +25,11 @@ module MarketCreation {
         representation: bool
     }
 
+    // Coin for yes shares
+    struct Share has drop {
+        associated_market_id: u64,
+        representation : bool
+    }
 
     struct MarketManager has key, store {
         markets: vector<Market> // Bunch of Prediction Markets
@@ -39,6 +45,14 @@ module MarketCreation {
         move_to(account, market_manager);
     }
 
+    // TODO Mint Coin @ higher level
+    public fun ShareInit(witness: Share, ctx: &mut TxContex){
+        let (treasury, metadata) = coin::create_currency(witness, 0, b"PollShare", b"PS", b"", option::none(), ctx);
+        transfer::public_freeze_object(metadata);
+        trasury
+        //coin::mint_and_transfer(&mut treasury, qty, tx_context::sender(ctx), ctx);
+        //transfer::public_transfer(treasury, tx_context::sender(ctx))
+    }
     /**
     * @brief Create a market
     */
@@ -48,13 +62,18 @@ module MarketCreation {
         outcome_yes: vector<u8>,
         outcome_no: vector<u8>,
         initialStake: u64,
-        required_bond: u64
+        required_bond: u64,
+        ctx: &mut TxContex
     ): u64 {
         assert!(description.length > 0, "empty description");
         assert!(outcome_yes.length > 0, "empty outcome yes");
         assert!(outcome_no.length > 0, "empty outcome no");
         assert!(outcome_no != outcome_yes, "same outcome")
         let market_id = Vector::length((u64)&borrow_global_mut<MarketManager>(Signer::address_of(signer)).markets);
+        let market_share = Share{
+            associated_market_id : market_id,
+            representation : true,
+        };
         let new_market = Market {
             id: market_id,
             description,
