@@ -2,6 +2,7 @@ module TradingContract {
     use sui::address;
     use std ::vector;
 
+    //On peut utiliser les coins de Sui
     struct MarketShare has key {
         market_id: u64,
         outcome: bool,
