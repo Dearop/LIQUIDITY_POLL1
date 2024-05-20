@@ -15,7 +15,7 @@ module MarketCreation {
         resolution_outcome: Option<bool>,   // Option because can be None, True or False
         assertion_id: Option<u64>,
         marketShares : Share,
-        transaction : TransactionCap
+        transaction : TransactionCap<Share>,
         stake: u64
     }
 
@@ -27,6 +27,16 @@ module MarketCreation {
 
     struct MarketManager has key, store {
         markets: vector<Market> // Bunch of Prediction Markets
+    }
+
+    public fun mint(
+        treasury_cap: &mut TreasuryCap<Share>,
+        amount: u64,
+        recipient: address,
+        ctx: &mut TxContext,
+    ) {
+        let coin = coin::mint(treasury_cap, amount, ctx);
+        transfer::public_transfer(coin, recipient)
     }
 
     /**
