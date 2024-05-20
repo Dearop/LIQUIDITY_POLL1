@@ -7,16 +7,16 @@ export default function AssetPage() {
                 <h2 className="text-4xl font-bold">The name of your predicition</h2>    //call api                          
             </div>
             <section className="max-w-6xl mx-auto h-max">
-                <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 gap-8">
                     //start buy
                     <div className="bg-white p-4 rounded-lg">
                         <h3>Buy</h3>
-                        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                            <div className="bg-white p-4 rounded-lg">
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="bg-white p-4 rounded-lg hover: bg-white-100">
                                 Option1
                             </div> //call api
 
-                            <div className="bg-white p-4 rounded-lg">
+                            <div className="bg-white p-4 rounded-lg hover: bg-white-100">
                                 Option2
                             </div> // call api  
                             <div className="bg-transparent p-4 rounded-lg">
@@ -32,12 +32,12 @@ export default function AssetPage() {
                     //start sell
                     <div className="bg-white p-4 rounded-lg">
                         <h3>Sell</h3>
-                        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                            <div className="bg-white p-4 rounded-lg">
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="bg-white p-4 rounded-lg hover: bg-white-100">
                                 Option1
                             </div> //call api
 
-                            <div className="bg-white p-4 rounded-lg">
+                            <div className="bg-white p-4 rounded-lg hover: bg-white-100">
                                 Option2
                             </div> // call api  
                             <div className="bg-transparent p-4 rounded-lg">
@@ -52,9 +52,9 @@ export default function AssetPage() {
                 </div>
             </section>
 
-        <section className="max-w-6xl mx-auto h-max"> 
-        //price history (bonne blague)
-        </section>
+            <section className="max-w-6xl mx-auto h-max"> 
+            //price history (bonne blague)
+            </section>
         </main>
     )
 }
