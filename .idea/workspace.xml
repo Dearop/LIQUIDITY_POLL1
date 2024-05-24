@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9dd5583-1355-4490-a6b4-501202660808" name="Changes" comment="" />
+    <list default="true" id="a9dd5583-1355-4490-a6b4-501202660808" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/LIQUIDITY_POLL1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LIQUIDITY_POLL1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/sources/MarketCreation.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/MarketCreation.move" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/sources/Share.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/Share.move" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/sources/SupraOracleIntegration.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/SupraOracleIntegration.move" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Move File" />
-        <option value="Move Module" />
         <option value="Sui Move Module" />
+        <option value="Move Module" />
       </list>
     </option>
   </component>
@@ -35,6 +41,9 @@
     &quot;accountId&quot;: &quot;bf6918ba-29e9-4e54-ad55-23c091fc6860&quot;
   }
 }</component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/sui-web3-template/package.json" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -46,37 +55,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "org.sui.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/sources/SupraOracleIntegration.move": "true",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.move.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/Move.toml&quot;: &quot;true&quot;,
+    &quot;org.sui.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/Move.toml&quot;: &quot;true&quot;,
+    &quot;org.sui.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/sources/MarketCreation.move&quot;: &quot;true&quot;,
+    &quot;org.sui.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/sources/Share.move&quot;: &quot;true&quot;,
+    &quot;org.sui.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/sources/SupraOracleIntegration.move&quot;: &quot;true&quot;,
+    &quot;org.sui.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/sources/TradingContract.move&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="AptosCommandConfiguration" factoryName="AnyCommand">
-      <option name="command" value="" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="SuiCommandConfiguration">
-      <option name="command" value="" />
-      <envs />
-      <method v="2" />
-    </configuration>
-  </component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -98,7 +100,8 @@
       <workItem from="1716138408919" duration="2725000" />
       <workItem from="1716141150812" duration="3057000" />
       <workItem from="1716198143420" duration="6861000" />
-      <workItem from="1716223713444" duration="7400000" />
+      <workItem from="1716223713444" duration="10583000" />
+      <workItem from="1716544996310" duration="1298000" />
     </task>
     <servers />
   </component>

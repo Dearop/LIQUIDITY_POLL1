@@ -6,14 +6,14 @@ module predictonMarket::SupraOracleIntegration {
     use supra_holder::svalue_feed_holder::OracleHolder;
     use supra_holder::price_data_pull;
 
-    struct PricePair has copy, drop, store {
+    public struct PricePair has copy, drop, store {
         pair: u32,
         price: u128,
         decimal: u16,
         round: u64,
     }
 
-    struct EmitPrice has copy, drop {
+    public struct EmitPrice has copy, drop {
         price_pairs: vector<PricePair>
     }
 

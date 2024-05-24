@@ -7,7 +7,7 @@ module predictionMarket::MarketCreation {
     use sui::tx_context::{Self, TxContext};
 
     public struct Market has key, store {
-        id: u64,
+        id: UID,
         description: vector<u8>,   // String Description of market
         // the user that runs that creates the assertion in the OOV3, necessary to settle the market once it's ready.z
         // Weights for or against
@@ -23,6 +23,7 @@ module predictionMarket::MarketCreation {
 
 
     public struct MarketManager has key, store {
+        id : UID,
         markets: vector<Market> // Bunch of Prediction Markets
     }
 
@@ -31,11 +32,10 @@ module predictionMarket::MarketCreation {
     */
     public fun initialize_market_manager(account: &signer) {
         let market_manager = MarketManager {
-            markets: Vector::empty<Market>()
+            markets: VecSet::empty<Market>()
         };
         move_to(account, market_manager);
     }
-
 
     /**
     * @brief Create a market
@@ -49,15 +49,12 @@ module predictionMarket::MarketCreation {
         required_bond: u64,
         ctx: &mut TxContex
     ): u64 {
-        assert!(description.length > 0, "empty description");
-        assert!(outcome_yes.length > 0, "empty outcome yes");
-        assert!(outcome_no.length > 0, "empty outcome no");
-        assert!(outcome_no != outcome_yes, "same outcome")
         let market_id = Vector::length((u64)&borrow_global_mut<MarketManager>(Signer::address_of(signer)).markets);
-        let market_share = Share{
+        let market_share = predictionMarket::Share{
             associated_market_id : market_id,
             representation : true,
         };
+        predictionMarket::ShareInit(market_share, ctx);
         let new_market = Market {
             id: market_id,
             description,
@@ -68,8 +65,6 @@ module predictionMarket::MarketCreation {
             assertion_id: Option::none()
         };
         Vector::push_back(&mut borrow_global_mut<MarketManager>(Signer::address_of(signer)).markets, new_market);
-        
-        
         market_id
     }
 }

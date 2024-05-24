@@ -10,6 +10,7 @@ module predictionMarket::Share{
         associated_market_id: u64,
         representation : bool
     }
+
     public fun mint(
         treasury_cap: &mut TreasuryCap<Share>,
         amount: u64,
