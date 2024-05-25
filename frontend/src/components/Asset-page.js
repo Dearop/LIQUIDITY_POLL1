@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function AssetPage({}) => {
+const AssetPage = ({}) => {
     return (
         <main className="bg-gradient-to-b from-gray-600 to-purple-500 text-white py-16 h-screen">
             <div className="text-center mb-12">
