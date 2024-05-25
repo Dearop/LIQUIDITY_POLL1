@@ -1,13 +1,13 @@
 import React from "react"
 
-export default function AssetPage() {
+export default function AssetPage({}) => {
     return (
         <main className="bg-gradient-to-b from-gray-600 to-purple-500 text-white py-16 h-screen">
             <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold">The name of your predicition</h2>    //call api                          
             </div>
             <section className="max-w-6xl mx-auto h-max">
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid grid-row-2 gap-8">
                     //start buy
                     <div className="bg-white p-4 rounded-lg">
                         <h3>Buy</h3>
@@ -56,5 +56,6 @@ export default function AssetPage() {
             //price history (bonne blague)
             </section>
         </main>
-    )
-}
+    );
+};
+export default AssetPage;
