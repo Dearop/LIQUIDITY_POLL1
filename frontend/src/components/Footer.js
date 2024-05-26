@@ -10,7 +10,7 @@ const Footer = () => {
             <a href="#" className="text-gray-700">
               Facebook
             </a>
-            <a href="#" className="text-gray-700">
+            <a href="https://x.com/home" className="text-gray-700">
               Twitter
             </a>
             <a href="#" className="text-gray-700">
