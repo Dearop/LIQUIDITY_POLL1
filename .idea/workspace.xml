@@ -67,41 +67,23 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-<<<<<<< Updated upstream
     &quot;org.move.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/Move.toml&quot;: &quot;true&quot;,
     &quot;org.sui.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/Move.toml&quot;: &quot;true&quot;,
     &quot;org.sui.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/sources/MarketCreation.move&quot;: &quot;true&quot;,
     &quot;org.sui.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/sources/Share.move&quot;: &quot;true&quot;,
     &quot;org.sui.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/sources/SupraOracleIntegration.move&quot;: &quot;true&quot;,
     &quot;org.sui.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/sources/TradingContract.move&quot;: &quot;true&quot;,
-=======
-    &quot;org.sui.hideNoMoveProjectNotifications/home/paul/Blockchain/SUI/SUI_hackathon/LIQUIDITY_POLL1/contracts/sources/SupraOracleIntegration.move&quot;: &quot;true&quot;,
->>>>>>> Stashed changes
     &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-<<<<<<< Updated upstream
-=======
-  <component name="RunManager">
-    <configuration default="true" type="AptosCommandConfiguration" factoryName="AnyCommand">
-      <option name="command" value="" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="SuiCommandConfiguration">
-      <option name="command" value="" />
-      <envs />
-      <method v="2" />
-    </configuration>
-  </component>
->>>>>>> Stashed changes
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -118,13 +100,8 @@
       <workItem from="1716138408919" duration="2725000" />
       <workItem from="1716141150812" duration="3057000" />
       <workItem from="1716198143420" duration="6861000" />
-<<<<<<< Updated upstream
       <workItem from="1716223713444" duration="10583000" />
       <workItem from="1716544996310" duration="1298000" />
-=======
-      <workItem from="1716223713444" duration="7400000" />
-      <workItem from="1716545355148" duration="1000" />
->>>>>>> Stashed changes
     </task>
     <servers />
   </component>

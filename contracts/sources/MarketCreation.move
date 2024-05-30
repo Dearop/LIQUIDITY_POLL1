@@ -16,7 +16,8 @@ module predictionMarket::MarketCreation {
         assertion_id: Option<u64>,
         marketShares : Share,
         transaction : TransactionCap<Share>,
-        stake: u64
+        stake: u64,
+        outcome : bool
     }
 
     // Coin for yes shares
@@ -43,13 +44,12 @@ module predictionMarket::MarketCreation {
     public fun initialize_market(
         signer: &signer,
         description: vector<u8>,
-        outcome_yes: vector<u8>,
-        outcome_no: vector<u8>,
+        outcome : bool,
         initialStake: u64,
         required_bond: u64,
-        ctx: &mut TxContex
+        ctx: &mut TxContext
     ): u64 {
-        let market_id = Vector::length((u64)&borrow_global_mut<MarketManager>(Signer::address_of(signer)).markets);
+        let market_id = vector::length((u64)&borrow_global_mut<MarketManager>(Signer::address_of(signer)).markets);
         let market_share = predictionMarket::Share{
             associated_market_id : market_id,
             representation : true,
@@ -58,11 +58,10 @@ module predictionMarket::MarketCreation {
         let new_market = Market {
             id: market_id,
             description,
-            outcome_yes,
-            outcome_no,
+            outcome,
             resolved: false,
-            resolution_outcome: Option::none(),
-            assertion_id: Option::none()
+            resolution_outcome: option::none(),
+            assertion_id: option::none()
         };
         Vector::push_back(&mut borrow_global_mut<MarketManager>(Signer::address_of(signer)).markets, new_market);
         market_id
