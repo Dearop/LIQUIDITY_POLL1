@@ -17,6 +17,8 @@ export default function BetLogic() {
     <div>
       {showOwnPage ? (
         <MainContent />
+
+
       ) : (
         <button onClick={handleClick}>
           <Bet

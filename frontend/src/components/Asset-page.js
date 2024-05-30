@@ -16,7 +16,7 @@ const AssetPage = ({ name, price }) => {
         </div>
         <div className="shadow-xl border border-solid border-zinc-400 bg-gradient-to-b from-blockbg to-blockbg2 p-4 rounded-lg flex-grow">
           <h3 className="text-xl font-bold text-black ml-4 my-4">Price History</h3>
-           
+          
         </div>
       </div>
     </main>
