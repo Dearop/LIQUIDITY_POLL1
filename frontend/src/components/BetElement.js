@@ -28,7 +28,7 @@ function betIcon(click){
     
 
     function handleClick(){
-        click
+        // click
     }
 
     return(
