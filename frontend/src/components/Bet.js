@@ -1,8 +1,8 @@
 import React from "react";
 
-const Bet = ({logo, title, volume, betUrl, coteOui, coteNon}) => {
+export function Bet({logo, title, volume, betUrl, coteOui, coteNon}){
     return (
-        <a href = {betUrl} className="w-80 flex flex-col space-y-2">
+        <button  className="w-80 flex flex-col space-y-2">
             <div className="h-12 pt-0 flex space-x-2 bg-white" >
                 <div className="pl-2">
                 <img
@@ -47,7 +47,7 @@ const Bet = ({logo, title, volume, betUrl, coteOui, coteNon}) => {
 
         
 
-        </a>
+        </button>
 
 
     );
