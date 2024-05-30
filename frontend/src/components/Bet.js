@@ -1,52 +1,33 @@
 import React from "react";
 
-export function Bet({logo, title, volume, betUrl, coteOui, coteNon}){
+export function Bet({logo, title, volume, coteOui, coteNon}){
     return (
-        <button  className="w-80 flex flex-col space-y-2">
-            <div className="h-12 pt-0 flex space-x-2 bg-white" >
-                <div className="pl-2">
-                <img
-                    class="fit-picture relative w-full h-full rounded-full overflow-hidden" layout="fill" objectFit="cover"
-                    src= {logo}
-                    />
+        <button  className="border border-solid border-zinc-400 bg-zinc-200 rounded-lg">
+            <div className="grid grid-cols-2 gap-4 m-1">
+                <div className="bg-zinc-300 rounded-lg">
+                    <img src={logo} alt="logo" className="w-16 h-16 rounded-full"/>
                 </div>
-                <p className="place-content-center">
-                    {title}
-                </p>
-            </div>
-            <div className = "mu-2 flex flex-col  rounded-lg">
-                <div className="h-12 flex justify-between bg-black ">
-                    <div className="place-content-center">
-                        <p className="ml-2 place-content-center text-white ">
-                            Name1
-                        </p>
-                    </div>
-                    <div className="mr-6 place-content-center text-white">
-                        {coteOui}
-                    </div>
+                <div className="bg-zinc-300 rounded-lg">
+                    <h3 className>{title}</h3>
                 </div>
-                <div className="h-12 flex justify-between bg-red-600">
-                    <div className="place-content-center">
-                        <p className="ml-2 place-content-center text-black ">
-                            Name2
-                        </p>
-                    </div>
-                    <div className="mr-6 place-content-center">
-                        {coteNon}
-                    </div>
-                </div>
-            
-            </div>
-            <div className="h-6 pb-6 pt-2 flex mb-8 rounded-lg">
-
-                <p className="ml-2 place-content-center">
-                    ${volume} in Bet
-                </p>  
             </div>
 
 
-        
+            <div className = "bg-gradient-to-b from-blockbg to-blockbg2 p-4 rounded-lg flex-grow grid grid-cols-2 gap-4 m-1">
+                <div className="bg-zinc-400/[0.8] p-4 rounded-lg hover:bg-green-400">
+                    <h3 className="text-white text text-black">Yes</h3>
+                    <p className="text-white text text-black">{coteOui}</p>
+                </div>
+                <div className="bg-zinc-400/[0.8] p-4 rounded-lg hover:bg-red-400">
+                    <h3 className="text-white text text-black">No</h3>
+                    <p className="text-white text text-black">{coteNon}</p>
+                </div>
+            </div>
 
+
+            <div className="bg-zinc-400/[0.8] p-4 rounded-lg m-1">
+                <h1 className="text-white text text-black">{volume}</h1>
+            </div>
         </button>
 
 

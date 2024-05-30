@@ -1,6 +1,5 @@
 import React from "react";
 import Option from "./Option";
-import ChartV2 from "./ChartV2";
 
 const AssetPage = ({ name, price }) => {
   return (
