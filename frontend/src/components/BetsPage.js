@@ -9,7 +9,7 @@ const bet =  {logo: "test",
 
             }
 
-const BetPage = () => {
+ export function BetPage(){
     return (
       
       <main className="bg-gradient-to-b from-gray-600 to-purple-500 text-white h-screen">
@@ -80,4 +80,4 @@ const BetPage = () => {
     );
   };
 
-  export default BetPage;
+ 
