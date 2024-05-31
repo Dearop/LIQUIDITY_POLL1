@@ -2,7 +2,7 @@
 name = "predictionMarket"
 edition = "2024.beta" # edition = "legacy" to use legacy (pre-2024) Move
 license = "MIT"
-authors = ["Grillet-Aubert Alexis (@Krut007)"]      # e.g., ["Joe Smith (joesmith@noemail.com)", "John Snow (johnsnow@noemail.com)"]
+authors = ["Grillet-Aubert Alexis (@Krut007)", "Quesnot Paul Louis Robert(Dearop)"]      # e.g., ["Joe Smith (joesmith@noemail.com)", "John Snow (johnsnow@noemail.com)"]
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/devnet" }

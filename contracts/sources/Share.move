@@ -8,7 +8,7 @@ module predictionMarket::Share{
 
     public struct Share has drop {
         associated_market_id: u64,
-        representation : bool
+        representation: bool
     }
 
     public fun mint(
@@ -22,11 +22,9 @@ module predictionMarket::Share{
     }
 
     // TODO Mint Coin @ higher level
-    public fun ShareInit(witness: Share, ctx: &mut TxContex){
-        let (treasury, metadata) = coin::create_currency(witness, 0, b"PollShare", b"PS", b"", option::none(), ctx);
+    public fun init(witness: Share, ctx: &mut TxContex){
+        let (treasury, metadata) = coin::create_currency(witness, 6, b"PollShare", b"PS", b"", option::none(), ctx);
         transfer::public_freeze_object(metadata);
-        trasury
-        //coin::mint_and_transfer(&mut treasury, qty, tx_context::sender(ctx), ctx);
-        //transfer::public_transfer(treasury, tx_context::sender(ctx))
+        transfer::public_transfer(treasury, tx_context::sender(ctx))
     }
 }
