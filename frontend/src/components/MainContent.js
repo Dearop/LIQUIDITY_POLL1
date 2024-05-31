@@ -2,6 +2,7 @@ import React from "react";
 import Bet from "./Bet";
 import { BetData } from "./BetData";
 import BetElement from "./BetElement"
+import log from "./logo.png"
 
 export function MainContent(handleClick1){
   
@@ -18,6 +19,7 @@ export function MainContent(handleClick1){
     <main className="bg-gradient-to-b from-gray-600 to-purple-500 text-white py-16 h-screen">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold">All-in</h2>
+        <image src={log} alt="logo" />
         <p className="text-xl">Sui's Greatest Prevision Market</p>
         <div className="mt-4">
           <input
