@@ -4,7 +4,7 @@ module predictionMarket::MarketCreation {
     use sui::coin;
     use std::option;
     use sui::transfer;
-    use sui::tx_context::{Self, TxContext};
+    use sui::tx_context;
 
     public struct Market has key, store {
         id: UID,
@@ -33,7 +33,7 @@ module predictionMarket::MarketCreation {
     */
     public fun initialize_market_manager(account: &signer) {
         let market_manager = MarketManager {
-            markets: VecSet::empty<Market>()
+            markets: vecset::empty<Market>()
         };
         move_to(account, market_manager);
     }
@@ -54,7 +54,7 @@ module predictionMarket::MarketCreation {
             associated_market_id : market_id,
             representation : true,
         };
-        predictionMarket::ShareInit(market_share, ctx);
+        predictionMarket::Share::init(market_share, ctx);
         let new_market = Market {
             id: market_id,
             description,
