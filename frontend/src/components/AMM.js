@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Select, Option as MTOption } from '@material-tailwind/react';
 
-const OurOption = ({ name, price = 100 }) => {
+const AMM = ({ price = 100 }) => {
     const [Amount, SetAmount] = useState(0);
 
     const calculateTotal = () => {
@@ -19,20 +19,13 @@ const OurOption = ({ name, price = 100 }) => {
 
     const handleBuyClick = () => {
         if (Amount !== 0) {
-            alert(`Buying ${Amount} units of ${name} at price ${price} for a total of ${calculateTotal()}`);
+            alert(`Buying ${Amount} units of amm for ${calculateTotal()}`);
         }
     };
-
-    const handleSellClick = () => {
-        if (Amount !== 0) {
-            alert(`Selling ${Amount} units of ${name} at price ${price} for a total of ${calculateTotal()}`);
-        }
-    };
-
 
     return (
         <div className="shadow-xl border border-solid border-zinc-400 bg-gradient-to-b from-blockbg to-blockbg2 p-4 rounded-lg flex-grow">
-            <h3 className="text-white text-xl font-bold text-black ml-4 my-4">{name}</h3>
+            <h3 className="text-white text-xl font-bold text-black ml-4 my-4">Buy AMM</h3>
             <div className="grid grid-cols-2 gap-4">
                 <button
                     className="bg-violet-400/[0.8] p-4 rounded-lg hover:bg-green-500"
@@ -40,13 +33,6 @@ const OurOption = ({ name, price = 100 }) => {
                     style={{ color: 'yellow' }}
                 >
                     Buy
-                </button>
-                <button
-                    className="bg-violet-400/[0.8] p-4 rounded-lg hover:bg-red-500"
-                    onClick={handleSellClick}
-                    style={{ fontWeight: 'bold', color: 'yellow' }}
-                >
-                    Sell
                 </button>
                 <div className="bg-violet-400/[0.8] p-4 rounded-lg">
                     Price: {price}
@@ -69,4 +55,4 @@ const OurOption = ({ name, price = 100 }) => {
     );
 };
 
-export default OurOption;
+export default AMM;
