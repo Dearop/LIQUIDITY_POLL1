@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a9dd5583-1355-4490-a6b4-501202660808" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/Move.lock" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Move.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/Move.toml" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Move.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/sources/MarketCreation.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/MarketCreation.move" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/sources/MarketResolution.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/MarketResolution.move" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/sources/SupraOracleIntegration.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/SupraOracleIntegration.move" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/sources/Share.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/Share.move" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/sources/TradingContract.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/TradingContract.move" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +104,7 @@
       <workItem from="1716198143420" duration="6861000" />
       <workItem from="1716223713444" duration="10583000" />
       <workItem from="1716544996310" duration="1298000" />
-      <workItem from="1717163211447" duration="5935000" />
+      <workItem from="1717163211447" duration="8694000" />
     </task>
     <servers />
   </component>
