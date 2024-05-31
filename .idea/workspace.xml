@@ -8,9 +8,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/Move.lock" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Move.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/Move.toml" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Move.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/sources/MarketCreation.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/MarketCreation.move" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/sources/Share.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/Share.move" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/sources/TradingContract.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/TradingContract.move" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/build/predictionMarket/BuildInfo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/build/predictionMarket/BuildInfo.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/build/predictionMarket/bytecode_modules/MarketCreation.mv" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/build/predictionMarket/bytecode_modules/MarketCreation.mv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/build/predictionMarket/bytecode_modules/Share.mv" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/build/predictionMarket/bytecode_modules/Share.mv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/build/predictionMarket/source_maps/MarketCreation.mvsm" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/build/predictionMarket/source_maps/MarketCreation.mvsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/build/predictionMarket/source_maps/Share.mvsm" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/build/predictionMarket/source_maps/Share.mvsm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +106,7 @@
       <workItem from="1716198143420" duration="6861000" />
       <workItem from="1716223713444" duration="10583000" />
       <workItem from="1716544996310" duration="1298000" />
-      <workItem from="1717163211447" duration="8694000" />
+      <workItem from="1717163211447" duration="10003000" />
     </task>
     <servers />
   </component>
