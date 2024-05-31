@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         blockbg: '#685484',
         blockbg2: '#8854bc',
+        grid: '#5E9193', 
       }
     },
   },

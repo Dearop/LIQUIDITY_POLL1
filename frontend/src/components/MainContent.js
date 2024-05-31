@@ -1,13 +1,17 @@
 import React from "react";
 import Bet from "./Bet";
 import { BetData } from "./BetData";
-const MainContent = () => {
+import BetElement from "./BetElement"
+
+export function MainContent(handleClick1){
   
-  const betList = BetData.map(bet => <div className="w-96 flex space-x-8"><Bet logo={bet.logo}
+  const betList = BetData.map(bet => <div className="w-96 flex space-x-8"><BetElement logo={bet.logo}
                                           title={bet.title}
                                           volume={bet.volume}
                                           coteNon={bet.coteNon}
-                                          coteOui={bet.coteOui}/> </div>);
+                                          coteOui={bet.coteOui}
+                                          handleClick1={handleClick1}/>
+                                           </div>);
 
 
   return (
