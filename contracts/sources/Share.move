@@ -6,7 +6,7 @@ module predictionMarket::Share{
     use sui::transfer;
     use sui::tx_context::{Self, TxContext};
 
-    public struct Share has drop {
+    public struct Share has drop, store {
         associated_market_id: u64,
         representation: bool
     }

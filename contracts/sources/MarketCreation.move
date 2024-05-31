@@ -1,69 +1,46 @@
 module predictionMarket::MarketCreation {
-    use std::vector;
-    use sui::address;
-    use sui::coin;
-    use std::option;
-    use sui::transfer;
+    use sui::object;
     use sui::tx_context;
+    use std::option::{Option, none}; // Only necessary options imported
+    use predictionMarket::Share::Share;
 
     public struct Market has key, store {
         id: UID,
         description: vector<u8>,   // String Description of market
-        // the user that runs that creates the assertion in the OOV3, necessary to settle the market once it's ready.z
-        // Weights for or against
         resolved: bool,            // Market is finished
         resolution_outcome: Option<bool>,   // Option because can be None, True or False
-        assertion_id: Option<u64>,
-        marketShares : Share,
-        transaction : TransactionCap<Share>,
+        marketShares: Share,
         stake: u64,
-        outcome : bool
     }
-
-    // Coin for yes shares
-
 
     public struct MarketManager has key, store {
-        id : UID,
-        markets: vector<Market> // Bunch of Prediction Markets
+        id: UID,
+        markets: vector<Market>, // Bunch of Prediction Markets
     }
 
-    /**
-    * @brief Create an empty market manager on startup
-    */
-    public fun initialize_market_manager(account: &signer) {
-        let market_manager = MarketManager {
-            markets: vecset::empty<Market>()
-        };
-        move_to(account, market_manager);
+    /// Create an empty market manager on startup
+    public fun init_market_manager(ctx: &mut TxContext) {
+        transfer :: transfer( MarketManager {
+            id: object::new(ctx),
+            markets: vector::empty<Market>(),
+        } , tx_context::sender(ctx));
     }
 
-    /**
-    * @brief Create a market
-    */
-    public fun initialize_market(
-        signer: &signer,
+    /// Create a market
+    public fun init_market(
+        ctx: &mut TxContext,
         description: vector<u8>,
-        outcome : bool,
-        initialStake: u64,
-        required_bond: u64,
-        ctx: &mut TxContext
-    ): u64 {
-        let market_id = vector::length((u64)&borrow_global_mut<MarketManager>(Signer::address_of(signer)).markets);
-        let market_share = predictionMarket::Share{
-            associated_market_id : market_id,
-            representation : true,
-        };
-        predictionMarket::Share::init(market_share, ctx);
-        let new_market = Market {
-            id: market_id,
+        marketShares: Share,
+        stake: u64
+    ): Market {
+        let id = object::new(ctx);
+        Market {
+            id,
             description,
-            outcome,
             resolved: false,
-            resolution_outcome: option::none(),
-            assertion_id: option::none()
-        };
-        Vector::push_back(&mut borrow_global_mut<MarketManager>(Signer::address_of(signer)).markets, new_market);
-        market_id
+            resolution_outcome: none(),
+            marketShares,
+            stake,
+        }
     }
 }
