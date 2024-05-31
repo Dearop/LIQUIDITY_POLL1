@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9dd5583-1355-4490-a6b4-501202660808" name="Changes" comment="" />
+    <list default="true" id="a9dd5583-1355-4490-a6b4-501202660808" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/Move.lock" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Move.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/Move.toml" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Move.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/sources/MarketCreation.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/MarketCreation.move" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/sources/Share.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/Share.move" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/sources/SupraOracleIntegration.move" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/sources/TradingContract.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/TradingContract.move" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/tests/predictionmarket_tests.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/tests/predictionmarket_tests.move" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

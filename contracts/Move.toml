@@ -20,7 +20,8 @@ MoveStdlib = { git = "https://github.com/MystenLabs/sui.git", rev = "framework/d
 # Override = { local = "../conflicting/version", override = true }
 
 [addresses]
-predictionMarket = "0x0"
+interact = "0x0"
+Share = "0x00ded131b8985021492908b35ef53b6a4057a46c85f6f0966f83f799bde4fcea"
 
 # Named addresses will be accessible in Move as `@name`. They're also exported:
 # for example, `std = "0x1"` is exported by the Standard Library.
