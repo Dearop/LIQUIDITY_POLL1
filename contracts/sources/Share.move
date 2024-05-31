@@ -7,7 +7,6 @@ module predictionMarket::Share{
     use sui::tx_context::{Self, TxContext};
 
     public struct Share has drop, store {
-        associated_market_id: u64,
         representation: bool
     }
 
@@ -29,5 +28,19 @@ module predictionMarket::Share{
     ) {
         let coin = coin::mint(treasury_cap, amount, ctx);
         transfer::public_transfer(coin, recipient)
+    }
+
+    public entry fun burn(treasury: &mut coin::TreasuryCap<Share>, coin: coin::Coin<Share>) {
+        coin::burn(treasury, coin);
+    }
+
+
+    /// Sell (cash out) shares
+    public fun sell(
+        shares: &mut vector<Share>,
+        seller: address,
+        buyer: address
+    ) {
+
     }
 }
