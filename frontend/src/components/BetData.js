@@ -6,7 +6,7 @@ export const BetData = [
       name: '2024-01-01',
       price: 4000,
       volume: 2400,
-      logo: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FFichier%3AUEFA_Champions_League_logo_2.svg&psig=AOvVaw3_MFWHSxsAwU8Ofz-cf9C0&ust=1717156492985000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCJCVrMmotYYDFQAAAAAdAAAAABAE",
+      logo: " https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freevector.com%2Fuefa-champions-league&psig=AOvVaw20BA9xv-jq0Ek_-sKScPKW&ust=1717261184068000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNiApMiuuIYDFQAAAAAdAAAAABAE",
       title: "Gagnant de la champions league",
       coteOui: "1.5",
       coteNon: "1.2"

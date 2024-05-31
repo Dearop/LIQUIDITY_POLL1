@@ -3,7 +3,7 @@ import { Select, Option as MTOption } from '@material-tailwind/react';
 
 const OurOption = ({ name, price = 100 }) => {
     const [Amount, SetAmount] = useState(3);
-    const [svalue, setValue] = useState(null);
+    // const [svalue, setValue] = useState(null);
 
     const calculateTotal = () => {
         return price * Amount;
@@ -20,7 +20,7 @@ const OurOption = ({ name, price = 100 }) => {
 
     const handleBuyClick = () => {
         if (Amount !== 0) {
-            alert(`Buying ${Amount} units of ${name} at price ${price} for a total of ${calculateTotal()} on ${svalue}`);
+            alert(`Buying ${Amount} units of ${name} at price ${price} for a total of ${calculateTotal()}`);
         }
     };
 
@@ -30,10 +30,10 @@ const OurOption = ({ name, price = 100 }) => {
         }
     };
 
-    const handleChange = (event) => {
-        setValue(event.target.value);
-        console.log('value:', event.target.value);
-    };
+    // const handleChange = (event) => {
+    //     setValue(event.target.value);
+    //     console.log('value:', event.target.value);
+    // };
 
     return (
         <div className="shadow-xl border border-solid border-zinc-400 bg-gradient-to-b from-blockbg to-blockbg2 p-4 rounded-lg flex-grow">
@@ -64,7 +64,7 @@ const OurOption = ({ name, price = 100 }) => {
                         onChange={handleAmountChange}
                         className="bg-zinc-300/[0.8] py-4 pl-7 pr-4 w-full rounded-lg text-black"
                     />
-                    <div className="absolute inset-y-0 right-0 flex items-center">
+                    {/* <div className="absolute inset-y-0 right-0 flex items-center">
                         <select
                             label="Select Version"
                             value={svalue}
@@ -74,7 +74,7 @@ const OurOption = ({ name, price = 100 }) => {
                             <MTOption value="Market">Market</MTOption>
                             <MTOption value="AMM">AMM</MTOption>
                         </select>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="bg-violet-400/[0.8] p-4 rounded-lg text-center">
                     Total: {calculateTotal()}
