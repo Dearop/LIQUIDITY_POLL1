@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9dd5583-1355-4490-a6b4-501202660808" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/Move.lock" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Move.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/Move.toml" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Move.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/sources/MarketCreation.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/MarketCreation.move" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/sources/Share.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/Share.move" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/sources/TradingContract.move" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/sources/TradingContract.move" afterDir="false" />
-    </list>
+    <list default="true" id="a9dd5583-1355-4490-a6b4-501202660808" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,14 +74,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -105,6 +90,7 @@
       <workItem from="1716223713444" duration="10583000" />
       <workItem from="1716544996310" duration="1298000" />
       <workItem from="1717163211447" duration="8694000" />
+      <workItem from="1717174279656" duration="3000" />
     </task>
     <servers />
   </component>
