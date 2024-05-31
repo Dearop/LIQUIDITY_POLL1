@@ -21,7 +21,7 @@ const App = () => {
       <Header />
       
       <div>
-        {showOwnPage ? test : <MainContent handleClick1 = {handleClick}/>}
+        {showOwnPage ? <Footer/> : <MainContent/>}
         </div>
         
       

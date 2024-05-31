@@ -5,13 +5,15 @@ import { Bet } from './Bet';
 import { BetPage } from './BetsPage';
 import { AssetPage } from './Asset-page';
 import MainContent from './MainContent';
+import App from '../App';
 
-export default function BetLogic({logo1, title1, volume1, coteOui1, coteNon1, handleClick1}) {
+
+export default function BetLogic({logo1, title1, volume1, coteOui1, coteNon1}) {
+
   const [showOwnPage, setShowOwnPage] = useState(false);
 
   function handleClick() {
     setShowOwnPage(true);
-    handleClick1;
   }
 
   return (
